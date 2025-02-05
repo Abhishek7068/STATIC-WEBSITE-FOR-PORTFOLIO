@@ -57,3 +57,11 @@ Website Features:-
 
 ➡ Portfolio Website Link (https://portfolio-gwluczu8x-abhishek7068s-projects.vercel.app)
 
+# output
+
+![Image](https://github.com/user-attachments/assets/d89549ac-4cd4-4afa-8649-25da2b604ec9)
+![Image](https://github.com/user-attachments/assets/83466b56-28e7-466d-a852-a3d0baa1f92e)
+![Image](https://github.com/user-attachments/assets/7bdbf9fa-286e-45d2-9590-625cdff8168d)
+![Image](https://github.com/user-attachments/assets/0352b5a6-e690-4e6d-bd28-ca361b45c0f9)
+![Image](https://github.com/user-attachments/assets/52183650-14a2-46ae-9986-813255b744e4)
+![Image](https://github.com/user-attachments/assets/c961b4ff-925b-486d-b5d8-573b492e8ef9)
