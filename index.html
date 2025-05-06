@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=north_east" />
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/44c2d72c71.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <style>
         .material-symbols-outlined {
@@ -21,7 +22,6 @@
         </style>
 </head>
 <body>
-    <div id="overlay"></div>
     <div id="header">
         <div class="container">
             <nav>
@@ -31,245 +31,167 @@
                     <li><a href="#About">About Me</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">My work</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
+                    
                     <!-- <i class="fa-solid fa-xmark" onclick="closemenu()"></i> -->
                 </ul>
                 
-                <a class="contact-border" href="">Contact<span class="material-symbols-outlined">
-                    north_east
-                    </span></a>
+                <a class="contact-border" href="#contact">Contact Me</a>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Full Stack Developer</p>
                 <h1>Hi, I'm <span>Abhishek Maurya</span><br> from Noida</h1>
             </div>
-            <a href="./CV/Abhishek Maurya Resume.pdf" class="btn btn2 btn3" download>Download CV</a>
+            <a href="./CV/2 Abhishek Maurya Resume.pdf" class="btn btn2 btn3" download>Download CV</a>
         </div>
     </div>
-
  <!-- -----------------About----------------------    -->
-
-    <div id="About">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="./images/user.jpg" alt="">
+    <section class="animate-section">
+        <div id="About">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="./images/user.jpg" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Greetings, My name is Abhishek Maurya. I am a recent BTech graduate in Computer science and engineering with a 7.33 CGPA. I am  passionate, hard-working, sincere, and ready to put my skills into action in an organiztion where I can learn new skills and grow with the company by giving my 100%.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('educations')">Education</p>
+                            <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        </div>
+                        <div class="tab-content active-tab" id="skills">
+                            <ul>
+                                <li><span>Python</span><br>Python, Django, Numpy</li>
+                                <li><span>Full Stack Development</span><br>HTML/CSS, Javascript, React, Node, express, MongoDB, MySQL</li>
+                                <li><span>C/C++</span><br>OOPs, C, C++</li>                                
+                                <li><span>Software</span><br>Postman, VScode</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content"id="educations">
+                            <ul>
+                                <li><span>Gradutaion  (2020-2024)</span><br>B.Tech in Computer Science & Engineering</li>
+                                <li><span>Learning course  (2022-2023)</span><br>The Complete 2023 Web Development Bootcamp by Angela YU from Udemy</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="projects">
+                            <ul>
+                                <li><span>Chaton</span><br>A Social Media app which is a user-friendly frontend interface using a combination of HTML, CSS, Javascript and React to provide 
+                                    a intuitive and responsive experience.</li>
+                                <li><span>Portfolio</span><br>Developed and deployed my own Portfolio where I used  HTML, CSS, and Javascript to create with responsive functions.</li>
+                                <li><span>To-do List</span><br>Developed a full-stack To-Do List app with FastAPI as the backend and React as the frontend. Implemented CRUD 
+                                    operations to add, edit, delete, and mark tasks as complete.  Designed a responsive UI with a centered task table, 
+                                    supporting long-task previews and strikethrough effects for completed tasks. Configured FastAPI to serve static files, 
+                                    enabling seamless integration of frontend assets. Optimized navigation for both the backend and frontend, ensuring 
+                                    smooth user experience. </li>
+                                <li><span>Real-Time collaborative editor</span><br>This project is a real-time collaborative note-taking tool that allows a user to edit a shared document with real time saving.<li>
+                            </ul>
+                        </div>
+                    </div>
+                
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Greetings, My name is Abhishek Maurya. I am a recent BTech graduate in Computer science and engineering with a 7.33 CGPA. I am  passionate, hard-working, sincere, and ready to put my skills into action in an organiztion where I can learn new skills and grow with the company by giving my 100%.</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('educations')">Education</p>
-                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+            </div>
+    </section>
+<!-- -------------------------------my Work------------------------- -->
+    <section class="animate-section">
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="./images/notepad.png" alt="">
+                        <div class="layer">
+                            <h3>Real-time update notepad</h3>
+                            <p>The app lets you take notes and updates simultaneoulsy and download it.</p>
+                            <a href="https://real-time-collaborative-tool.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
                     </div>
-                    <div class="tab-content active-tab" id="skills">
-                        <ul>
-                            <li><span>Python</span><br>Python, Django, Numpy</li>
-                            <li><span>C/C++</span><br>OOPs, C, C++</li>
-                            <li><span>Full Stack Development</span><br>HTML/CSS, Javascript, React, Node, Javascript, MySQl</li>
-                        </ul>
+                    <div class="work">
+                        <img src="./images/image.png" alt="">
+                        <div class="layer">
+                            <h3>To-Do Lsit</h3>
+                            <p>The app enables you add task to do and delete remove update according to you.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
                     </div>
-                    <div class="tab-content"id="educations">
-                        <ul>
-                            <li><span>2020-2024</span><br>B.Tech in Computer Science & Engineering</li>
-                            <li><span>2022-2023</span><br>The Complete 2023 Web Development Bootcamp by Angela YU from Udemy</li>
-                        </ul>
+                    <div class="work">
+                        <img src="./images/port.png" alt="">
+                        <div class="layer">
+                            <h3>Portfolio</h3>
+                            <p>The app connects you to the talented people around the world. Download it from play store.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
                     </div>
-                    <div class="tab-content" id="projects">
-                        <ul>
-                            <li><span>Chaton</span><br>A Social Media app which is a user-friendly frontend interface using a combination of HTML, CSS, Javascript and React to provide 
-                                a intuitive chat experience. Architected and implemented the backend infrastructure using Node.js and API endpoint. </li>
-                            <li><span>Portfolio</span><br>Developed and deployed my own Portfolio where I used  HTML, CSS, and Javascript to create with responsive functions.</li>
-                            <li><span>Snake Game</span><br>Snake is an action video game genre where the player controls a snake-like line that grows longer as it eats food. The player must guide the snake around obstacles without it colliding with itself or other objects, which becomes more difficult as the snake gets longer. The game ends when the snake hits a wall or its own tail.</li>
-                        </ul>
-                    </div>
+                    
+                    
                 </div>
-               
+                <a href="#" class="btn">See More</a>
             </div>
         </div>
     </section>
     <!-- -------------------------Services---------------------- -->
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-globe"></i>
-                    <h2>Web Design</h2>
-                    <p>Our Web Design Services are tailored to create visually appealing, user-friendly, and responsive websites that align with your brand and business goals. Whether you're launching a new website or revamping an existing one, we specialize in delivering high-quality, custom web design solutions that drive engagement and convert visitors into loyal customers.</p>
-                    <a href="#">Learn more</a>
+    <section class="animate-section">
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-globe"></i>
+                        <h2>Web Design</h2>
+                        <p>Our Web Design Services are tailored to create visually appealing, user-friendly, and responsive websites that align with your brand and business goals. Whether you're launching a new website or revamping an existing one, we specialize in delivering high-quality, custom web design solutions that drive engagement and convert visitors into loyal customers.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop"></i>
+                        <h2>Graphics Design</h2>
+                        <p>Our Web Design Services are tailored to create visually appealing, user-friendly, and responsive websites that align with your brand and business goals. Whether you're launching a new website or revamping an existing one, we specialize in delivering high-quality, custom web design solutions that drive engagement and convert visitors into loyal customers.</p>
+                        <a href="https://www.canva.com/design/DAGljnVQzy0/GfD09d5EkmSt3BCmaLCiFA/edit?utm_content=DAGljnVQzy0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store-ios"></i>
+                        <h2>App Design</h2>
+                        <p>Our Web Design Services are tailored to create visually appealing, user-friendly, and responsive websites that align with your brand and business goals. Whether you're launching a new website or revamping an existing one, we specialize in delivering high-quality, custom web design solutions that drive engagement and convert visitors into loyal customers.</p>
+                        <a href="https://www.figma.com/design/g8wIClxer4xk9XHuOASskU/todo-ui-test?node-id=0-1&p=f&t=XROSw5XtNFbHhikP-0">Learn more</a>
+                    </div>
                 </div>
-                <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>Graphics Design</h2>
-                    <p>Our Web Design Services are tailored to create visually appealing, user-friendly, and responsive websites that align with your brand and business goals. Whether you're launching a new website or revamping an existing one, we specialize in delivering high-quality, custom web design solutions that drive engagement and convert visitors into loyal customers.</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store-ios"></i>
-                    <h2>App Design</h2>
-                    <p>Our Web Design Services are tailored to create visually appealing, user-friendly, and responsive websites that align with your brand and business goals. Whether you're launching a new website or revamping an existing one, we specialize in delivering high-quality, custom web design solutions that drive engagement and convert visitors into loyal customers.</p>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
 
-        </div>
-    </div>
-<!-- -------------------------------my Work------------------------- -->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="./images/social.png" alt="">
-                <div class="layer">
-                    <h3>Social Media App</h3>
-                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="./images/snake.png" alt="">
-                <div class="layer">
-                    <h3>Snake Game</h3>
-                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="./images/user.jpg" alt="">
-                <div class="layer">
-                    <h3>Portfolio</h3>
-                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
             </div>
         </div>
-        <a href="#" class="btn">See More</a>
-    </div>
-</section>
+    </section>   
  <!-- -----------------------Contact---------------------- -->
-<div id="contact">
-    <div class="container">
-        <div class="row row2">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-phone"></i>7068222079</p>
-                <p><i class="fa-regular fa-paper-plane"></i>avi.abhishek001@gmail.com</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/abhishek-maurya-381183207/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100091685665302"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://github.com/Abhishek7068"><i class="fa-brands fa-github"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter"></i></a>  
+    <section class="animate-section">
+        <div id="contact">
+            <div class="container">
+                <div class="row row2">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-phone"></i>7068222079</p>
+                        <p><i class="fa-regular fa-paper-plane"></i>avi.abhishek001@gmail.com</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/abhishek-maurya-381183207/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100091685665302"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://github.com/Abhishek7068"><i class="fa-brands fa-github"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>  
+                        </div>
+                        <a href="./CV/Abhishek Maurya Resume.pdf" class="btn btn2" download>Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email"  name="Email" placeholder="Your Email" required>
+                            <textarea type="message" name="Message" rows="6" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn btn2" >Submit</button> 
+                        </form>
+                        <span id="msg"></span>
+                    </div>
                 </div>
-                <a href="./CV/Abhishek Maurya Resume.pdf" class="btn btn2" download>Download CV</a>
             </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email"  name="Email" placeholder="Your Email" required>
-                    <textarea type="message" name="Message" rows="6" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn btn2" >Submit</button> 
-                </form>
-                <span id="msg"></span>
+            <div class="copyright">
+                <p>copyright © Abhishek. MAde with easy <i class="fa fa-heart"></i> Tutorials</p>
             </div>
         </div>
-    </div>
-    <div class="copyright">
-        <p>copyright © Abhishek. MAde with easy <i class="fa fa-heart"></i> Tutorials</p>
-    </div>
-</div>
-
-<script>
-    var tablinks= document.getElementsByClassName('tab-links');
-    var tabcontents= document.getElementsByClassName('tab-content');
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove('active-link')
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove('active-tab')
-        }
-        event.currentTarget.classList.add('active-link')
-        document.getElementById(tabname).classList.add('active-tab')
-    }
-</script>
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    var overlay = document.getElementById("overlay");
-
-    function openmenu(){
-        sidemenu.style.right = '0';
-        overlay.style.display = 'block';
-      
-    }
-    function closemenu(){
-        sidemenu.style.right = '-200px';
-        overlay.style.display = 'none';
-    }
-    document.addEventListener('click', function(event) {
-    // Check if the click is outside the sidemenu or the menu button
-    if (!sidemenu.contains(event.target) && !event.target.matches('.fa-bars')) {
-        closemenu();
-    }
-    overlay.addEventListener('click',closemenu);
-});
-
-window.addEventListener("scroll", function () {
-    var navbar = document.querySelector("nav");
-    if (window.scrollY > 0) {
-        navbar.classList.add("sticky");
-    } else {
-        navbar.classList.remove("sticky");
-    }
-});
-
-
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  // Initialize EmailJS
-  (function () {
-    emailjs.init("nYK2oLUfMlYfsPtbi"); // Replace with your EmailJS Public Key
-  }());
-
-  const form = document.forms["submit-to-google-sheet"];
-  const msg = document.getElementById("msg");
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    // Prepare form data for EmailJS
-    const formData = {
-      Name: form.elements["Name"].value,
-      Email: form.elements["Email"].value,
-      Message: form.elements["Message"].value,
-    };
-
-    // Send the email using EmailJS
-    emailjs
-      .send("service_xyw03bs", "template_dd3tmor", formData)
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          msg.innerHTML = "Message sent successfully!";
-          setTimeout(() => (msg.innerHTML = ""), 5000);
-          form.reset();
-        },
-        (error) => {
-          console.error("FAILED...", error);
-          msg.innerHTML = "Failed to send message!";
-        }
-      );
-  });
-</script>
-
-
-
-
+    </section>
+    <script src="./index.js" ></script>
 </body>
 </html>

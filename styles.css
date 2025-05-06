@@ -9,18 +9,24 @@ html{
 body{
     background-color: #080808;
     color: #fff;
+
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 #header{
     height: 100vh;
     width: 100%;
-   
+    background-image: linear-gradient(to top, #080808, #1a1844, #262081, #3e1fc0,#6600ff);
 
 }
+
 .container{
     padding: 10px 10%;
    
 }
-
 
 nav {
     display: flex;
@@ -40,7 +46,7 @@ nav h1 {
 
 }
 nav h1 span{
-    color: #6600ff;
+    color: black;
 }
 
 nav ul {
@@ -69,7 +75,7 @@ nav ul li a::after{
     bottom: -6px;
     height: 3px;
     position: absolute;
-    background: #6600ff;
+    background: white;
     transition: 0.5s;
     transform: translateX(-50%);
 }
@@ -126,7 +132,7 @@ nav ul li:last-child {
 /* --------------------------About------------------------- */
 
 #About{
-    padding: 80px 0px;
+    padding: 70px 0px;
     color: #ababaa;
 }
 
@@ -193,7 +199,7 @@ nav ul li:last-child {
 }
 .tab-content ul li span{
     font-size: 14px;
-    color: #4700b3
+    color: #6600ff
 }
 
 .tab-content{
@@ -208,6 +214,7 @@ nav ul li:last-child {
 
 #services{
     padding: 30px 0px;
+    background-color: black;
 
 }
 .services-list{
@@ -253,14 +260,16 @@ nav ul li:last-child {
 /* ----------------MyWOrk---------------------------------- */
 
 #portfolio{
-    padding: 50px 0px;
+    padding: 30px 0px;
+    
 }
 
 .work-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3,1fr);
     grid-gap: 40px;
     margin-top: 50px;
+    
 }
 
 
@@ -354,7 +363,12 @@ nav ul li:last-child {
 }
 
 /* -------------------contact----------------- */
+#contact{
+    background-color: black;
+
+}
 .row.row2{
+    margin-top: 40px;
     gap: 40px;
 }
 .contact-left{
@@ -407,12 +421,13 @@ nav ul li:last-child {
 }
 
 form input, form textarea{
-    width: 100%;
+    width: 96%;
     border: 0;
     outline: none;
+    resize: none;
     background: #262626;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     padding: 15px;
     margin: 15px 0px;
     border-radius: 5px;
@@ -445,6 +460,36 @@ form .btn2{
 nav .fa-solid{
     display: none;
 }
+
+
+
+/* Scroll animation CSS */
+/* Initial hidden state */
+.animate-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+/* Fade in (appear from bottom) */
+.animate-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade out when scrolling down (move up) */
+.animate-section.hidden-up {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+/* Fade out when scrolling up (move down) */
+.animate-section.hidden-down {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
 
 
 @media only screen and (max-width: 667px){
@@ -555,6 +600,10 @@ nav .fa-solid{
         z-index: 900; /* Below sidemenu but above the content */
         display: none; /* Hidden by default */
         transition: 0.3s ease;
+    }
+    .work-list{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
     
 }
