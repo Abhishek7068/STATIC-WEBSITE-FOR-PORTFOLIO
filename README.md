@@ -55,7 +55,7 @@ Website Features:-
 9. Deployment on Vercel
   The website is hosted and deployed on Vercel, ensuring high performance and global accessibility. You can visit my portfolio here:
 
-➡ Portfolio Website Link (https://portfolio-gwluczu8x-abhishek7068s-projects.vercel.app)
+➡ Portfolio Website Link (https://portfolio-vmw2gr6wt-abhishek7068s-projects.vercel.app)
 
 # output
 
